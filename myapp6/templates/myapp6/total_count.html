@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h3>{{ title }}</h3>
+
+<!-- отрабатывает, если передаётся переменная total (первые два варианта во view) -->
+{% if total %}
+<p>{{ total }}</p>
+{% endif %}
+
+<!-- отрабатывает, если передаётся переменная products (3-й вариант во view) -->
+{% if products %}
+<p>{{ products.total_quantity }}</p>
+{% endif %}
+
+{% endblock %}
